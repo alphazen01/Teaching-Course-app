@@ -11,16 +11,18 @@ class CustomModelTest extends StatefulWidget {
 class _CustomModelTestState extends State<CustomModelTest> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.teal,
-      appBar: AppBar(
-        title: Text("Model test"),
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.teal,
+        appBar: AppBar(
+          title: Text("Model test"),
+        ),
+       body: Column(
+         children: [
+           CustomModelButton(),
+         ],
+       ),
       ),
-     body: Column(
-       children: [
-         CustomModelButton(),
-       ],
-     ),
     );
   }
 }
@@ -82,7 +84,6 @@ class CustomModelButton extends StatelessWidget {
                             height: 20,
                             child: ElevatedButton(
                               onPressed: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (_)=>LogInScreen()));
                               }, 
                               child: Text(
                                 "ক ইউনিট",

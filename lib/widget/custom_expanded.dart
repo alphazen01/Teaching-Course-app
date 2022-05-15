@@ -41,6 +41,7 @@ class _CustomExpandedState extends State<CustomExpanded> {
              ),
              child: Center(child: Text("বিষয় নির্বাচন করুন",style: TextStyle(color: Colors.white),)),
             ),
+            SizedBox(height: 5,),
              Expanded(
                child: GridView.builder(
                  itemCount: widget.title.length,
