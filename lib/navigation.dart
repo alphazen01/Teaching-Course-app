@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:demo/account.dart';
 import 'package:demo/book.dart';
 import 'package:demo/model_test.dart';
-import 'package:demo/home2.dart';
+import 'package:demo/home.dart';
 import 'package:demo/language.dart';
 import 'package:demo/log_in.dart';
 import 'package:demo/rooms.dart';
@@ -30,7 +30,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
     HomeScreen2(),
     SignUpScreen(),
     LogInScreen(),
-    VideoScreen(),
+    BookScreen(),
     LanguageScreen(),
     LanguageScreen()
     

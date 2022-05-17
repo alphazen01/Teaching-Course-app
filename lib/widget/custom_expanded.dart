@@ -34,7 +34,7 @@ class _CustomExpandedState extends State<CustomExpanded> {
               Container(
               padding: EdgeInsets.symmetric(horizontal: 10),
              width: double.infinity,
-             height: 20,
+             height: 30,
              decoration: BoxDecoration(
                color: Color(0xf045de9).withOpacity(0.90),
                borderRadius: BorderRadius.circular(20)
