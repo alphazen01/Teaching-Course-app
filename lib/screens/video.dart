@@ -90,6 +90,7 @@ class _VideoScreenState extends State<VideoScreen> {
             Padding(
               padding: const EdgeInsets.only(left: 20),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               SizedBox(
                 height: 40,

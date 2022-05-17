@@ -66,6 +66,7 @@ class CustomModelButton extends StatelessWidget {
                   )
                   ),
               ),
+              SizedBox(height: 10,),
               Container(
                 height: 70,
                 child: Column(
@@ -222,6 +223,7 @@ class CustomModelButton extends StatelessWidget {
                   )
                   ),
               ),
+              SizedBox(height: 10,),
                Container(
                 height: 70,
                 child:Column(
@@ -377,6 +379,7 @@ class CustomModelButton extends StatelessWidget {
                   )
                   ),
               ),
+              SizedBox(height: 10,),
                Container(
                 height: 70,
                 child: Column(
@@ -438,8 +441,6 @@ class CustomModelButton extends StatelessWidget {
                              ),
                           ),
                         ),
-    
-    
                       ],
                     ),
                       Row(
@@ -497,8 +498,6 @@ class CustomModelButton extends StatelessWidget {
                              ),
                           ),
                         ),
-    
-    
                   ],
                 ),
                   ],
@@ -532,145 +531,136 @@ class CustomModelButton extends StatelessWidget {
                   )
                   ),
               ),
-               Container(
-                height: 70,
-                color: Colors.white,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
+              SizedBox(height: 10,),
+               Column(
+                 mainAxisAlignment: MainAxisAlignment.spaceAround,
+                 children: [
+                   Row(
+                     mainAxisAlignment: MainAxisAlignment.spaceAround,
+                     children: [
+                         Card(
+                         elevation: 20,
+                         shape: RoundedRectangleBorder(
+                           borderRadius: BorderRadius.circular(20)
+                         ),
+                         child: SizedBox(
+                           width: 150,
+                           height: 20,
+                           child: ElevatedButton(
+                             onPressed: (){}, 
+                             child: Text(
+                               "ক ইউনিট",
+                               style: TextStyle(
+                                 color: Colors.black,
+                                 fontWeight: FontWeight.bold
+                               ),
+                               ),
+                             style: ElevatedButton.styleFrom(
+                               shape: RoundedRectangleBorder(
+                                 borderRadius: BorderRadius.circular(20)
+                               ),
+                               primary: Colors.white
+                             ),
+                            ),
+                         ),
+                       ),
                           Card(
-                          elevation: 20,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)
-                          ),
-                          child: SizedBox(
-                            width: 150,
-                            height: 20,
-                            child: ElevatedButton(
-                              onPressed: (){}, 
-                              child: Text(
-                                "ক ইউনিট",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold
-                                ),
-                                ),
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20)
-                                ),
-                                primary: Colors.white
-                              ),
+                         elevation: 20,
+                         shape: RoundedRectangleBorder(
+                           borderRadius: BorderRadius.circular(20)
+                         ),
+                         child: SizedBox(
+                           width: 150,
+                           height: 20,
+                           child: ElevatedButton(
+                             onPressed: (){}, 
+                             child: Text(
+                               "খ ইউনিট",
+                               style: TextStyle(
+                                 color: Colors.black,
+                                 fontWeight: FontWeight.bold
+                               ),
+                               ),
+                             style: ElevatedButton.styleFrom(
+                               shape: RoundedRectangleBorder(
+                                 borderRadius: BorderRadius.circular(20),
+                                 
+                               ),
+                               primary: Colors.white
                              ),
-                          ),
-                        ),
-                           Card(
-                          elevation: 20,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)
-                          ),
-                          child: SizedBox(
-                            width: 150,
-                            height: 20,
-                            child: ElevatedButton(
-                              onPressed: (){}, 
-                              child: Text(
-                                "খ ইউনিট",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold
-                                ),
-                                ),
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                  
-                                ),
-                                primary: Colors.white
-                              ),
-                             ),
-                          ),
-                        ),
+                            ),
+                         ),
+                       ),
     
     
-                      ],
-                    ),
-                      Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
+                     ],
+                   ),
+                   SizedBox(height: 5,),
+                     Row(
+                 mainAxisAlignment: MainAxisAlignment.spaceAround,
+                 children: [
+                    Card(
+                         elevation: 20,
+                         shape: RoundedRectangleBorder(
+                           borderRadius: BorderRadius.circular(20)
+                         ),
+                         child: SizedBox(
+                           width: 150,
+                           height: 20,
+                           child: ElevatedButton(
+                             onPressed: (){}, 
+                             child: Text(
+                               "গ ইউনিট",
+                               style: TextStyle(
+                                 color: Colors.black,
+                                 fontWeight: FontWeight.bold
+                               ),
+                               ),
+                             style: ElevatedButton.styleFrom(
+                               shape: RoundedRectangleBorder(
+                                 borderRadius: BorderRadius.circular(20)
+                               ),
+                               primary: Colors.white
+                             ),
+                            ),
+                         ),
+                       ),
                      Card(
-                          elevation: 20,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)
-                          ),
-                          child: SizedBox(
-                            width: 150,
-                            height: 20,
-                            child: ElevatedButton(
-                              onPressed: (){}, 
-                              child: Text(
-                                "গ ইউনিট",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold
-                                ),
-                                ),
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20)
-                                ),
-                                primary: Colors.white
-                              ),
+                         elevation: 20,
+                         shape: RoundedRectangleBorder(
+                           borderRadius: BorderRadius.circular(20)
+                         ),
+                         child: SizedBox(
+                           width: 150,
+                           height: 20,
+                           child: ElevatedButton(
+                             onPressed: (){}, 
+                             child: Text(
+                               "",
+                               style: TextStyle(
+                                 color: Colors.black,
+                                 fontWeight: FontWeight.bold
+                               ),
+                               ),
+                             style: ElevatedButton.styleFrom(
+                               shape: RoundedRectangleBorder(
+                                 borderRadius: BorderRadius.circular(20)
+                               ),
+                               primary: Colors.white
                              ),
-                          ),
-                        ),
-                      Card(
-                          elevation: 20,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)
-                          ),
-                          child: SizedBox(
-                            width: 150,
-                            height: 20,
-                            child: ElevatedButton(
-                              onPressed: (){}, 
-                              child: Text(
-                                "",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold
-                                ),
-                                ),
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20)
-                                ),
-                                primary: Colors.white
-                              ),
-                             ),
-                          ),
-                        ),
+                            ),
+                         ),
+                       ),
     
     
-                  ],
-                ),
-                  ],
-                ),
-              ),
+                 ],
+               ),
+                 ],
+               ),
             
             ],
           ),
         ),
-    
-    
-    
-    
-    
-    
-    
     
           ],
         ),

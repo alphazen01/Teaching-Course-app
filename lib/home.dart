@@ -3,6 +3,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:demo/account.dart';
 import 'package:demo/model_test.dart';
+import 'package:demo/screens/video.dart';
 import 'package:demo/widget/custom_expanded.dart';
 import 'package:flutter/material.dart';
 
@@ -183,13 +184,13 @@ List<String>exam=[
                 height: MediaQuery.of(context).size.height/1,
                 color: Colors.white,
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 20,bottom: 30),
+                  padding: const EdgeInsets.only(top: 20,bottom: 30,right: 25),
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
                         Container(
                            width: double.infinity,
-                            height: 50,
+                            height: 40,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: Colors.blue,
@@ -730,7 +731,7 @@ List<String>exam=[
                 itemBuilder:  (BuildContext,  index){
                 return GestureDetector(
                   onTap: (){
-                    
+                    Navigator.push(context, MaterialPageRoute(builder: (_)=>VideoScreen()));
                   },
                   child: Container(
                     decoration: BoxDecoration(

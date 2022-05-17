@@ -9,22 +9,10 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: Drawer(),
         appBar: AppBar(
           backgroundColor: Color(0xf045de9).withOpacity(0.80),
           elevation: 0,
-        leading: Builder(
-            builder: (context) {
-              return IconButton(
-                onPressed: (){
-    
-                  Scaffold.of(context).openDrawer();
-                 
-                }, 
-                icon:Icon(Icons.menu,size: 32,)
-              );
-            }
-          ),
+       
           actions: [
             IconButton(
             onPressed: (){}, 
