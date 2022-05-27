@@ -444,27 +444,7 @@ List<String>exam=[
             height: 30,
             width: 115,
             child: ElevatedButton(
-            onPressed: (){
-               setState(() {
-                    isOpen = !isOpen;
-                    isTap2=true; 
-                    });
-              if (isOpen) {
-               bottomSheetController=  _bottomSheet(context);
-               bottomSheetController.closed.then((value) {
-               setState(() {
-              isOpen = !isOpen;
-              isTap2=false;
-            });
-          }
-          );
-              } else {
-               Navigator.of(context).pop();
-            setState(() {
-              isOpen =!isOpen;
-            });
-          }
-            }, 
+            onPressed: (){}, 
         child: Text("চাকরি প্রস্তুতি"),
         style: ElevatedButton.styleFrom(
         shape: RoundedRectangleBorder(

@@ -12,13 +12,277 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-       drawer: Drawer(),
+       drawer: Drawer(
+         child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              height: MediaQuery.of(context).size.height/3,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(40)),
+                color: Color(0xf045de9).withOpacity(0.90),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 25,),
+                child: Stack(
+             children: [
+              Positioned(
+                top: 20,
+                left: 20,
+                child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                InkWell(
+                onTap: (){},
+                child: CircleAvatar(
+                radius: 45,
+                backgroundColor: Colors.white,
+                child: Padding(
+                padding: const EdgeInsets.only(left: 10,top: 20),
+                child: Column(
+                children: [
+                Text(
+                  "Add your  ",textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500
+                  ),
+                ),
+                Text(
+                  "picture ",textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 15,),
+                  Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                  Text(
+                      "Name:",
+                      style: TextStyle(
+                        color:Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700 
+                      ),
+                    ),
+                  SizedBox(height: 15,),
+                  Text(
+                    "College/University:",
+                    style: TextStyle(
+                      color:Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700 
+                    ),
+                    ),
+                    SizedBox(height: 15,),
+                  Text(
+                    "Badge:",
+                    style: TextStyle(
+                      color:Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700 
+                    ),
+                  ),
+                  SizedBox(height: 15,),
+                  Text(
+                    "Prize:",
+                    style: TextStyle(
+                      color:Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700 
+                          ),
+                        ),
+                      ],
+                    )
+                   ],
+                  ),
+                ),
+                ],
+                ),
+              ),
+              
+            ),
+                  Container(
+                    height:MediaQuery.of(context).size.height/1.7,
+                    width: double.infinity,
+                    child:  Container(
+                    width: double.infinity,
+                    height: MediaQuery.of(context).size.height/1,
+                    color: Colors.white,
+                    child: Padding(
+                    padding: const EdgeInsets.only(top: 20,bottom: 30,right: 25),
+                    child: SingleChildScrollView(
+                    child: Column(
+                    children: [
+                  ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/d_books.png",scale: 18,),
+                    title: Text(
+                          "Books",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black54
+                          ),
+                          ),
+                      ),
+                 ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/d_play_button.png",scale: 18,),
+                    title: Text(
+                           "HSC Preparation",
+                           style: TextStyle(
+                             fontSize: 18,
+                             color: Colors.black54
+                           ),
+                           ),
+                       ),
+                ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/d_play_button.png",scale: 18,),
+                    title: Text(
+                          "Admission Preparation",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black54
+                          ),
+                          ),
+                      ),
+                ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/d_play_button.png",scale: 18,),
+                    title: Text(
+                             "Jop Preparation",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                         ),
+                ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/e_m_q.png",scale: 18,),
+                    title: Text(
+                             "Exam",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                         ),
+                ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/e_m_q.png",scale: 18,),
+                    title: Text(
+                             "Model Test",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                         ),
+                ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/e_m_q.png",scale: 18,),
+                    title: Text(
+                             "Quiz",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                         ),
+                ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/youtube.png",scale: 18,),
+                    title: Text(
+                             "Youtube",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                         ),
+                ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/facebook.png",scale: 18,),
+                    title: Text(
+                             "Facebook",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                         ),
+                ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/instagram.png",scale: 18,),
+                    title: Text(
+                             "Instagram",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                         ),
+                ListTile(
+                  onTap: (){},
+                  leading: Image.asset("assets/about_us.png",scale: 18,),
+                  title: Text(
+                             "About us",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                         ),
+                     
+                ListTile(
+                  onTap: (){},
+                  leading: Image.asset("assets/contact.png",scale: 18,),
+                  title: Text(
+                             "Contact us",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                            ),  
+                        ],
+                      ),
+                      ),
+                    ),
+                  ),
+                  ),
+               SizedBox(height: 10,)
+                ],
+              ),
+              ),
+       ),
        appBar: AppBar(
          backgroundColor: Color(0xf045de9).withOpacity(0.90),
          elevation: 0,
+         leading: Builder(
+          builder: (context) {
+            return IconButton(
+              onPressed: (){
+                Scaffold.of(context).openDrawer();
+              }, 
+              icon:Icon(Icons.menu,size: 32,)
+            );
+          }
+        ),
          actions: [
           IconButton(
-            
           onPressed: (){}, 
           icon: Container(
             child: Image.asset("assets/cart.png",),
@@ -43,6 +307,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
              Transform.translate(
                offset: Offset(0, -70),
                child: CircleAvatar(
+                 backgroundColor: Colors.blue,
                  radius: 60,
                  child: InkWell(
                    child: CircleAvatar(
