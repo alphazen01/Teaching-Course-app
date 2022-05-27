@@ -1,6 +1,7 @@
 
 
 import 'package:demo/model_test.dart';
+import 'package:demo/widget/custom_expanded.dart';
 import 'package:flutter/material.dart';
 
 class LanguageScreen extends StatefulWidget {
@@ -22,202 +23,259 @@ class _LanguageScreenState extends State<LanguageScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-    //     extendBodyBehindAppBar: true,
-    //     appBar: AppBar(
-    //       elevation: 0,
-    //       backgroundColor: Colors.purple.shade700,
-    //     ),
-    //     body: Column(
-    //       children: [
-    //         Stack(
-    //           children: [
-    //             Container(
-    //               width: double.infinity,
-    //               height: 200,
-    //               decoration: BoxDecoration(
-    //               color: Colors.purple.shade700,
-    //               borderRadius: BorderRadius.only(
-    //                 bottomLeft: Radius.circular(40),
-    //                 bottomRight: Radius.circular(40),
-    //                  topLeft: Radius.circular(40),
-    //                 topRight: Radius.circular(40)
-    //               )
-    //               ),
-    //               child: Row(
-    //                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-    //                 children: [
-    //                    Card(
-    //                   elevation: 20,
-    //                   shape: RoundedRectangleBorder(
-    //                       borderRadius:BorderRadius.circular(20) 
-    //                     ),
-    //                   child: SizedBox(
-    //                     height: 30,
-    //                     width: 100,
-    //                     child: ElevatedButton(
-    //                     onPressed: (){
-    //                       setState(() {
-    //                          isOpen = !isOpen;
-    //                           isTap=false;
-    //                           isTap2=true;
-    //                           isTap3=false;
-    //                           isTap4=false; 
+      //   extendBodyBehindAppBar: true,
+      //   appBar: AppBar(
+      //     elevation: 0,
+      //     backgroundColor: Colors.purple.shade700,
+      //   ),
+      //   body: Column(
+      //     children: [
+      //       Stack(
+      //         children: [
+      //           Container(
+      //             width: double.infinity,
+      //             height: 200,
+      //             decoration: BoxDecoration(
+      //             color: Colors.purple.shade700,
+      //             borderRadius: BorderRadius.only(
+      //               bottomLeft: Radius.circular(40),
+      //               bottomRight: Radius.circular(40),
+      //                topLeft: Radius.circular(40),
+      //               topRight: Radius.circular(40)
+      //             )
+      //             ),
+      //             child: Row(
+      //               mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //               children: [
+      //                  Card(
+      //                 elevation: 20,
+      //                 shape: RoundedRectangleBorder(
+      //                     borderRadius:BorderRadius.circular(20) 
+      //                   ),
+      //                 child: SizedBox(
+      //                   height: 30,
+      //                   width: 100,
+      //                   child: ElevatedButton(
+      //                   onPressed: (){
+      //                     setState(() {
+      //                        isOpen = !isOpen;
+      //                         isTap=true;
+                              
+                              
 
-    //                       });
-    //                      if (isOpen) {
-    //                        bottomSheetController=  showBottomSheet(
-    //       shape: RoundedRectangleBorder(
-    //         borderRadius: BorderRadius.vertical(
-    //           top: Radius.circular(20),
-    //         ),
-    //       ),
-    //       context: context,
-    //       builder: (context) => Container(
-    //             height: MediaQuery.of(context).size.height/1.5,
-
-    //             child: new Container(
-    //                 decoration: new BoxDecoration(
-    //                     color: Theme.of(context).primaryColor,
-    //                     borderRadius: new BorderRadius.only(
-    //                         topLeft: const Radius.circular(20.0),
-    //                         topRight: const Radius.circular(20.0))),
-    //                 child: new Center(
-    //                   child: new Text("This is a modal sheet"),
-    //                 )),
-    //           ));
-    //            bottomSheetController.closed.then((value) {
-    //         setState(() {
-    //           isOpen = !isOpen;
-             
-             
-    //         });
-    //       });
-    //        } 
+      //                     });
+      //                    if (isOpen) {
+      //                       bottomSheetController=_bottomSheet(context); 
+      //                     bottomSheetController.closed.then((value) {
+      //                   setState(() {
+      //                     isOpen = !isOpen;
+      //                     isTap=false;
+      //                   });
+      //                 });
+      //                 } else {
+      //                   Navigator.of(context).pop();
+      //                   setState(() {
+      //                     isOpen =!isOpen;
+                         
+      //                   });
+      //                 }
+                      
                        
 
-    //   //     } else {
-    //   //     Navigator.of(context).pop();
-    //   //     setState(() {
-    //   //       isOpen = !isOpen;
-    //   //     });
-    //   //   }
-    //   // },
+      // //     } else {
+      // //     Navigator.of(context).pop();
+      // //     setState(() {
+      // //       isOpen = !isOpen;
+      // //     });
+      // //   }
+      // // },
 
 
-    //                     }, 
-    //                     child: Text("Sign up"),
-    //                     style: ElevatedButton.styleFrom(
-    //                       shape: RoundedRectangleBorder(
-    //                         borderRadius: BorderRadius.circular(20),
-    //                       ),
-    //                       primary:isTap? Color(0xf045de9).withOpacity(0.90):Colors.green
-    //                     ),
-    //                 ),
-    //               ),
-    //               ),
-    //         SizedBox(height: 5,),
-    //         Card(
-    //         elevation: 20,
-    //         shape: RoundedRectangleBorder(
-    //           borderRadius:BorderRadius.circular(20) 
-    //         ),
-    //         child: SizedBox(
-    //           width: 100,
-    //           height: 30,
-    //           child: ElevatedButton(
-    //               onPressed: (){}, 
-    //               child: Text(
-    //                 "Log In",
-    //                 style: TextStyle(
-    //                   color: Colors.blueAccent
-    //                 ),
-    //               ),
-    //               style: ElevatedButton.styleFrom(
-    //                 shape: RoundedRectangleBorder(
-    //                   borderRadius: BorderRadius.circular(20)
-    //                 ),
-    //                 primary: Colors.white
-    //                     ),
-    //                 ),
-    //               ),
-    //               ),
-    // Card(
-    //   elevation: 20,
-    //   shape: RoundedRectangleBorder(
-    //       borderRadius:BorderRadius.circular(20) 
-    //     ),
-    //   child: SizedBox(
-    //     height: 30,
-    //     width: 100,
-    //     child: ElevatedButton(
-    //     onPressed: (){
-    //       setState(() {
-    //           isOpen = !isOpen;
-    //          isTap=false;
-    //              isTap2=true;
-    //              isTap3=false;
-    //              isTap4=false; 
+      //                   }, 
+      //                   child: Text("Sign up"),
+      //                   style: ElevatedButton.styleFrom(
+      //                     shape: RoundedRectangleBorder(
+      //                       borderRadius: BorderRadius.circular(20),
+      //                     ),
+      //                     primary:isTap? Color(0xf045de9).withOpacity(0.90):Colors.green
+      //                   ),
+      //               ),
+      //             ),
+      //             ),
+      //       SizedBox(height: 5,),
+      //        Card(
+      //           elevation: 20,
+      //           shape: RoundedRectangleBorder(
+      //               borderRadius:BorderRadius.circular(20) 
+      //             ),
+      //           child: SizedBox(
+      //             height: 30,
+      //             width: 100,
+      //             child: ElevatedButton(
+      //             onPressed: (){
+      //               setState(() {
+      //               isOpen = !isOpen;
+      //               isTap2=true; 
+      //               });
+      //               if (isOpen) {
+      //               bottomSheetController=  showBottomSheet(
+      //               shape: RoundedRectangleBorder(
+      //               borderRadius: BorderRadius.vertical(
+      //               top: Radius.circular(20),
+      //              ),
+      //             ),
+      //             context: context,
+      //             builder: (context) => Container(
+      //             height: MediaQuery.of(context).size.height/1.5,
+      //             child: new Container(
+      //             decoration: new BoxDecoration(
+      //             color: Theme.of(context).primaryColor,
+      //             borderRadius: new BorderRadius.only(
+      //             topLeft: const Radius.circular(20.0),
+      //             topRight: const Radius.circular(20.0))),
+      //             child: new Center(
+      //             child: new Text("This is a modal sheet"),
+      //               )),
+      //            ));
+      //             bottomSheetController.closed.then((value) {
+      //       setState(() {
+      //         isOpen = !isOpen;
+      //         isTap2=false;
+      //       });
+      //     });
+      //     } else {
+      //       Navigator.of(context).pop();
+      //       setState(() {
+      //         isOpen =!isOpen;
+      //       });
+      //     }
+      //     }, 
+      //                   child: Text("Log"),
+      //                   style: ElevatedButton.styleFrom(
+      //                     shape: RoundedRectangleBorder(
+      //                       borderRadius: BorderRadius.circular(20),
+      //                     ),
+      //                     primary:isTap2? Color(0xf045de9).withOpacity(0.90):Colors.green
+      //                   ),
+      //               ),
+      //             ),
+      //             ),
+      //             Card(
+      //                 elevation: 20,
+      //                 shape: RoundedRectangleBorder(
+      //                     borderRadius:BorderRadius.circular(20) 
+      //                   ),
+      //                 child: SizedBox(
+      //                   height: 30,
+      //                   width: 100,
+      //                   child: ElevatedButton(
+      //                   onPressed: (){
+      //                     setState(() {
+      //                        isOpen = !isOpen;
+      //                     isTap3=true;
+                              
+                           
+                              
 
-    //       });
-    //       if (isOpen) {
-    //         bottomSheetController=  showBottomSheet(
-    //       shape: RoundedRectangleBorder(
-    //         borderRadius: BorderRadius.vertical(
-    //           top: Radius.circular(20),
-    //         ),
-    //       ),
-    //       context: context,
-    //       builder: (context) => Container(
-    //       height: MediaQuery.of(context).size.height/1.5,
-    //       child: CustomModelButton()
-    //         ));
-    //            bottomSheetController.closed.then((value) {
-    //         setState(() {
-    //           isOpen = !isOpen;
+      //                     });
+      //                    if (isOpen) {
+      //                       bottomSheetController=  showBottomSheet(
+      //     shape: RoundedRectangleBorder(
+      //       borderRadius: BorderRadius.vertical(
+      //         top: Radius.circular(20),
+      //       ),
+      //     ),
+      //     context: context,
+      //     builder: (context) => Container(
+      //           height: MediaQuery.of(context).size.height/1.5,
+
+      //           child: new Container(
+      //               decoration: new BoxDecoration(
+      //                   color: Theme.of(context).primaryColor,
+      //                   borderRadius: new BorderRadius.only(
+      //                       topLeft: const Radius.circular(20.0),
+      //                       topRight: const Radius.circular(20.0))),
+      //               child: new Center(
+      //                 child: new Text("This is a modal sheet"),
+      //               )),
+      //         ));
+      //          bottomSheetController.closed.then((value) {
+      //       setState(() {
+      //         isOpen = !isOpen;
+      //       });
+      //     });
+      //     } else {
+      //       Navigator.of(context).pop();
+      //       setState(() {
+      //         isOpen =!isOpen;
+      //         isTap3=false;
+              
              
-    //         });
-    //       }
-    //       ); 
-    //         } 
-    //         else {
-    //         // Navigator.of(context).pop();
-    //       setState(() {
-    //         isOpen = !isOpen;
-    //       });
-    //       }
+      //       });
+      //     }
+           
                        
 
-    //   //     } else {
-    //   //     Navigator.of(context).pop();
-    //   //     setState(() {
-    //   //       isOpen = !isOpen;
-    //   //     });
-    //   //   }
-    //   // },
+      // //     } else {
+      // //     Navigator.of(context).pop();
+      // //     setState(() {
+      // //       isOpen = !isOpen;
+      // //     });
+      // //   }
+      // // },
 
 
-    //       }, 
-    //       child: Text("Sign up1"),
-    //       style: ElevatedButton.styleFrom(
-    //         shape: RoundedRectangleBorder(
-    //           borderRadius: BorderRadius.circular(20),
-    //         ),
-    //         primary:Color(0xf045de9).withOpacity(0.90)
-    //                   ),
-    //               ),
-    //             ),
-    //             ),
-    //               ],
-    //               ),
-    //             ),
-    //           ],
-    //         ),
+      //                   }, 
+      //                   child: Text("press"),
+      //                   style: ElevatedButton.styleFrom(
+      //                     shape: RoundedRectangleBorder(
+      //                       borderRadius: BorderRadius.circular(20),
+      //                     ),
+      //                     primary:isTap3? Color(0xf045de9).withOpacity(0.90):Colors.green
+      //                   ),
+      //               ),
+      //             ),
+      //             ),
+  
+      //             ],
+      //             ),
+      //           ),
+      //         ],
+      //       ),
             
-    //       ],
-    //     ),
+      //     ],
+      //   ),
       ),
     );
   }
-
+ _bottomSheet(BuildContext context){
+    showBottomSheet(
+        
+            backgroundColor: Color(0xf045de9).withOpacity(0.90),
+            context: context,
+            builder: (context) => Container(
+              margin: EdgeInsets.symmetric(horizontal: 10),
+              color: Colors.white,
+            height: MediaQuery.of(context).size.height/1.85,
+            child: new Container(
+              margin: EdgeInsets.symmetric(horizontal: 10),
+            decoration: new BoxDecoration(
+            color: Colors.white,
+            ),
+            child: 
+              Column(
+           children: [
+             Container(
+            height: 100,
+            width: 200,
+            color: Colors.red,
+          ),
+           
+          ],
+          ),      
+            ),
+            )
+            );
+  }
 
 }
