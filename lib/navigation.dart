@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:demo/account.dart';
+import 'package:demo/account_drawer.dart';
 import 'package:demo/book.dart';
 import 'package:demo/model_test.dart';
 import 'package:demo/home.dart';
@@ -10,6 +10,7 @@ import 'package:demo/rooms.dart';
 import 'package:demo/screens/bangla_1st_exam.dart';
 import 'package:demo/screens/kuiz.dart';
 import 'package:demo/screens/exam.dart';
+import 'package:demo/screens/profile.dart';
 import 'package:demo/screens/video.dart';
 import 'package:demo/sign_up.dart';
 import 'package:demo/play_circle.dart';
@@ -32,7 +33,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
     LogInScreen(),
     BookScreen(),
     LanguageScreen(),
-    LanguageScreen()
+    ProfileScreen()
     
     
   ];

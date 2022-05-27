@@ -1,9 +1,10 @@
 
 
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:demo/account.dart';
+import 'package:demo/account_drawer.dart';
 import 'package:demo/model_test.dart';
 import 'package:demo/screens/video.dart';
+import 'package:demo/sign_up.dart';
 import 'package:demo/widget/custom_expanded.dart';
 import 'package:flutter/material.dart';
 
@@ -34,9 +35,13 @@ class _HomeScreen2State extends State<HomeScreen2> {
     
   ];
 
-     bool isOpen = false;
+   bool isOpen = false;
    bool isTap=false;
    bool isTap2=false;
+   bool isTap3=false;
+   bool isTap4=false;
+   bool isTap5=false;
+   bool isTap6=false;
    var bottomSheetController;
      List<String>model=[
   "মডেল টেস্ট ১",
@@ -96,351 +101,263 @@ List<String>exam=[
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xf045de9).withOpacity(0.90),
-       drawer: Container(
-         height: 1000,
-         color: Colors.red,
-         child: Drawer(
-            backgroundColor: Colors.blue,
-            child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                width: double.infinity,
-                height: MediaQuery.of(context).size.height/3,
-                color: Colors.white,
+       drawer: Drawer(
+          child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              height: MediaQuery.of(context).size.height/3,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(40)),
+                color: Color(0xf045de9).withOpacity(0.90),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 25,),
+                child: Stack(
+             children: [
+              Positioned(
+                top: 20,
+                left: 20,
+                child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                InkWell(
+                onTap: (){},
+                child: CircleAvatar(
+                radius: 45,
+                backgroundColor: Colors.white,
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 25,),
-                  child: Container(
-                    width: double.infinity,
-                    child:Stack(
-              children: [
-               
-                Positioned(
-                    top: 20,
-                    left: 20,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        
-                             Image.asset("assets/person.png",scale: 6,),
-                        SizedBox(width: 15,),
-                        
-                      
-                          Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Name:",
-                              style: TextStyle(
-                                color:Color(0xf045de9).withOpacity(0.90),
-                                fontSize: 18,
-                                fontWeight: FontWeight.w700 
-                              ),
-                            ),
-                            SizedBox(height: 15,),
-                            Text(
-                              "Collage/University:",
-                              style: TextStyle(
-                                color:Color(0xf045de9).withOpacity(0.90),
-                                fontSize: 18,
-                                fontWeight: FontWeight.w700 
-                              ),
-                              ),
-                              SizedBox(height: 15,),
-                            Text(
-                              "Badge:",
-                              style: TextStyle(
-                                color:Color(0xf045de9).withOpacity(0.90),
-                                fontSize: 18,
-                                fontWeight: FontWeight.w700 
-                              ),
-                            ),
-                            SizedBox(height: 15,),
-                            Text(
-                              "Prize:",
-                              style: TextStyle(
-                                color:Color(0xf045de9).withOpacity(0.90),
-                                fontSize: 18,
-                                fontWeight: FontWeight.w700 
+                padding: const EdgeInsets.only(left: 10,top: 20),
+                child: Column(
+                children: [
+                Text(
+                  "Add your  ",textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500
+                  ),
+                ),
+                Text(
+                  "picture ",textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500
                               ),
                             ),
                           ],
-                        )
-                       ],
+                        ),
                       ),
                     ),
-                    ],
+                  ),
+                  SizedBox(width: 15,),
+                  Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                  Text(
+                      "Name:",
+                      style: TextStyle(
+                        color:Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700 
+                      ),
+                    ),
+                  SizedBox(height: 15,),
+                  Text(
+                    "College/University:",
+                    style: TextStyle(
+                      color:Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700 
+                    ),
+                    ),
+                    SizedBox(height: 15,),
+                  Text(
+                    "Badge:",
+                    style: TextStyle(
+                      color:Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700 
                     ),
                   ),
-                ),
-                
-              ),
-              SizedBox(height: 15,),
-               Container(
-                 height:MediaQuery.of(context).size.height/1.7,
-                 width: double.infinity,
-                 child:  Container(
-                width: double.infinity,
-                height: MediaQuery.of(context).size.height/1,
-                color: Colors.white,
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 20,bottom: 30,right: 25),
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        Container(
-                           width: double.infinity,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.blue,
-                            ),
-                            
-                          child: ListTile(
-                            onTap: (){},
-                            title: Text(
-                              "Books",
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white
-                              ),
-                              ),
+                  SizedBox(height: 15,),
+                  Text(
+                    "Prize:",
+                    style: TextStyle(
+                      color:Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700 
                           ),
                         ),
-                        SizedBox(height: 10,),
-                        Container(
-                           width: double.infinity,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.blue,
-                            ),
-                            
-                          child: ListTile(
-                            onTap: (){},
-                            title: Text(
-                              "HSC Preparation",
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white
-                              ),
-                              ),
-                          ),
-                        ),
-                        SizedBox(height: 10,),
-                        Container(
-                           width: double.infinity,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.blue,
-                            ),
-                            
-                          child: ListTile(
-                            onTap: (){},
-                            title: Text(
-                              "Admission Preparation",
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white
-                              ),
-                              ),
-                          ),
-                        ),
-                        SizedBox(height: 10,),
-                        Container(
-                           width: double.infinity,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.blue,
-                            ),
-                            
-                          child: ListTile(
-                            onTap: (){},
-                            title: Text(
-                              "Job Preparation",
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white
-                              ),
-                              ),
-                          ),
-                        ),
-                        SizedBox(height: 10,),
-                        Container(
-                           width: double.infinity,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.blue,
-                            ),
-                            
-                          child: ListTile(
-                            onTap: (){},
-                            title: Text(
-                              "Exam",
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white
-                              ),
-                              ),
-                          ),
-                        ),
-                        SizedBox(height: 10,),
-                        Container(
-                           width: double.infinity,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.blue,
-                            ),
-                            
-                          child: ListTile(
-                            onTap: (){},
-                            title: Text(
-                              "Model Test",
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white
-                              ),
-                              ),
-                          ),
-                        ),
-                        SizedBox(height: 10,),
-                        Container(
-                           width: double.infinity,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.blue,
-                            ),
-                            
-                          child: ListTile(
-                            onTap: (){},
-                            title: Text(
-                              "Quize",
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white
-                              ),
-                              ),
-                          ),
-                        ),
-                        SizedBox(height: 10,),
-                        Container(
-                           width: double.infinity,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.blue,
-                            ),
-                            
-                          child: ListTile(
-                            onTap: (){},
-                            title: Text(
-                              "Youtube",
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white
-                              ),
-                              ),
-                          ),
-                        ),
-                        SizedBox(height: 10,),
-                        Container(
-                           width: double.infinity,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.blue,
-                            ),
-                            
-                          child: ListTile(
-                            onTap: (){},
-                            title: Text(
-                              "Facebook",
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white
-                              ),
-                              ),
-                          ),
-                        ),
-                        SizedBox(height: 10,),
-                        Container(
-                           width: double.infinity,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.blue,
-                            ),
-                            
-                          child: ListTile(
-                            onTap: (){},
-                            title: Text(
-                              "Instagram",
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white
-                              ),
-                              ),
-                          ),
-                        ),
-                        SizedBox(height: 10,),
-                        Container(
-                           width: double.infinity,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.blue,
-                            ),
-                            
-                          child: ListTile(
-                            onTap: (){},
-                            title: Text(
-                              "About us",
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white
-                              ),
-                              ),
-                          ),
-                        ),
-                        SizedBox(height: 10,),
-                        Container(
-                           width: double.infinity,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.blue,
-                            ),
-                            
-                          child: ListTile(
-                            onTap: (){},
-                            title: Text(
-                              "Contact us",
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.white
-                              ),
-                              ),
-                          ),
-                        ),
-                        
                       ],
-                    ),
+                    )
+                   ],
                   ),
                 ),
+                ],
+                ),
               ),
-               ),
+              
+            ),
+                  Container(
+                    height:MediaQuery.of(context).size.height/1.7,
+                    width: double.infinity,
+                    child:  Container(
+                    width: double.infinity,
+                    height: MediaQuery.of(context).size.height/1,
+                    color: Colors.white,
+                    child: Padding(
+                    padding: const EdgeInsets.only(top: 20,bottom: 30,right: 25),
+                    child: SingleChildScrollView(
+                    child: Column(
+                    children: [
+                  ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/d_books.png",scale: 18,),
+                    title: Text(
+                          "Books",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black54
+                          ),
+                          ),
+                      ),
+                 ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/d_play_button.png",scale: 18,),
+                    title: Text(
+                           "HSC Preparation",
+                           style: TextStyle(
+                             fontSize: 18,
+                             color: Colors.black54
+                           ),
+                           ),
+                       ),
+                ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/d_play_button.png",scale: 18,),
+                    title: Text(
+                          "Admission Preparation",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black54
+                          ),
+                          ),
+                      ),
+                ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/d_play_button.png",scale: 18,),
+                    title: Text(
+                             "Jop Preparation",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                         ),
+                ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/e_m_q.png",scale: 18,),
+                    title: Text(
+                             "Exam",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                         ),
+                ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/e_m_q.png",scale: 18,),
+                    title: Text(
+                             "Model Test",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                         ),
+                ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/e_m_q.png",scale: 18,),
+                    title: Text(
+                             "Quiz",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                         ),
+                ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/youtube.png",scale: 18,),
+                    title: Text(
+                             "Youtube",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                         ),
+                ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/facebook.png",scale: 18,),
+                    title: Text(
+                             "Facebook",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                         ),
+                ListTile(
+                    onTap: (){},
+                    leading: Image.asset("assets/instagram.png",scale: 18,),
+                    title: Text(
+                             "Instagram",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                         ),
+                ListTile(
+                  onTap: (){},
+                  leading: Image.asset("assets/about_us.png",scale: 18,),
+                  title: Text(
+                             "About us",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                         ),
+                     
+                ListTile(
+                  onTap: (){},
+                  leading: Image.asset("assets/contact.png",scale: 18,),
+                  title: Text(
+                             "Contact us",
+                             style: TextStyle(
+                               fontSize: 18,
+                               color: Colors.black54
+                             ),
+                             ),
+                            ),  
+                        ],
+                      ),
+                      ),
+                    ),
+                  ),
+                  ),
                SizedBox(height: 10,)
-            ],
-          ),
-        ),
-          
-         )
-        ),
+                ],
+              ),
+              ),
+              
+            ),
       appBar: AppBar(
         backgroundColor: Color(0xf045de9).withOpacity(0.7),
         elevation: 0,
@@ -448,9 +365,7 @@ List<String>exam=[
           builder: (context) {
             return IconButton(
               onPressed: (){
-
                 Scaffold.of(context).openDrawer();
-               
               }, 
               icon:Icon(Icons.menu,size: 32,)
             );
@@ -475,13 +390,11 @@ List<String>exam=[
               width: double.infinity,
               height: 120,
               child:   CarouselSlider(
-                
-                    options: CarouselOptions(
-                       enableInfiniteScroll: false,
-                       initialPage: 0,
-                        enlargeCenterPage: true,
-                        viewportFraction: 0.85,
-                        
+                options: CarouselOptions(
+                    enableInfiniteScroll: false,
+                    initialPage: 0,
+                    enlargeCenterPage: true,
+                    viewportFraction: 0.85,   
                     ),
                     items: List<Widget>.generate(2, (index) =>Image.asset(sImage[index%2]))
                   ),
@@ -497,42 +410,64 @@ List<String>exam=[
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                     SizedBox(
+             SizedBox(
             height: 30,
             width: 110,
             child: ElevatedButton(
-            onPressed: (){}, 
-  child: Text("এইচ এসসি"),
-  style: ElevatedButton.styleFrom(
-  shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          primary:Color(0xf045de9).withOpacity(0.90)
-                    ),
-                ),
-              ),
-                SizedBox(
-            height: 30,
-            width: 110,
-            child: ElevatedButton(
-            onPressed: (){}, 
-  child: Text("ভর্তি প্রস্তুতি"),
-  style: ElevatedButton.styleFrom(
-  shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          primary:Color(0xf045de9).withOpacity(0.90)
-                    ),
-                ),
-              ),
-                  SizedBox(
+            onPressed: (){
+              
+          }, 
+          child: Text("এইচ এসসি"),
+          style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  primary:isTap?Colors.purple.withOpacity(0.9): Color(0xf045de9).withOpacity(0.90)
+                            ),
+                        ),
+                      ),
+                        SizedBox(
+                    height: 30,
+                    width: 110,
+                    child: ElevatedButton(
+                    onPressed: (){}, 
+          child: Text("ভর্তি প্রস্তুতি"),
+          style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  primary:Color(0xf045de9).withOpacity(0.90)
+                            ),
+                        ),
+                      ),
+            SizedBox(
             height: 30,
             width: 115,
             child: ElevatedButton(
-            onPressed: (){}, 
-  child: Text("চাকরি প্রস্তুতি"),
-  style: ElevatedButton.styleFrom(
-  shape: RoundedRectangleBorder(
+            onPressed: (){
+               setState(() {
+                    isOpen = !isOpen;
+                    isTap2=true; 
+                    });
+              if (isOpen) {
+               bottomSheetController=  _bottomSheet(context);
+               bottomSheetController.closed.then((value) {
+               setState(() {
+              isOpen = !isOpen;
+              isTap2=false;
+            });
+          }
+          );
+              } else {
+               Navigator.of(context).pop();
+            setState(() {
+              isOpen =!isOpen;
+            });
+          }
+            }, 
+        child: Text("চাকরি প্রস্তুতি"),
+        style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
           primary:Color(0xf045de9).withOpacity(0.90)
@@ -551,8 +486,7 @@ List<String>exam=[
             onPressed: (){
               setState(() {
                  isOpen = !isOpen;
-                 isTap=false;
-                 isTap2=true;
+                 isTap4=true;
               });
              if (isOpen) {
                bottomSheetController=  showBottomSheet(
@@ -575,19 +509,30 @@ List<String>exam=[
             
           ),
            CustomExpanded(title: exam)
-   ],
-   ),      
-    ),
-    ));
-  
-  }
-  }, 
-  child: Text("পরীক্ষা"),
-  style: ElevatedButton.styleFrom(
-  shape: RoundedRectangleBorder(
+          ],
+          ),      
+            ),
+            ));
+          bottomSheetController.closed.then((value) {
+            setState(() {
+              isOpen = !isOpen;
+              isTap4=false;
+            });
+          }
+          );
+          } else {
+            Navigator.of(context).pop();
+            setState(() {
+              isOpen =!isOpen;
+            });
+          }
+          }, 
+          child: Text("পরীক্ষা"),
+          style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          primary:Color(0xf045de9).withOpacity(0.90)
+          primary:isTap4?Colors.purple.withOpacity(0.9):Color(0xf045de9).withOpacity(0.90)
                     ),
                 ),
               ),
@@ -598,8 +543,7 @@ List<String>exam=[
              onPressed: (){
               setState(() {
                  isOpen = !isOpen;
-                 isTap=false;
-                 isTap2=true;
+                 isTap5=true;
               });
              if (isOpen) {
                bottomSheetController=  showBottomSheet(
@@ -617,17 +561,28 @@ List<String>exam=[
            ),
             child: CustomModelButton()
                
-    ),
-    ));
-  
-  }
-  }, 
-  child: Text("মডেল টেস্ট"),
-  style: ElevatedButton.styleFrom(
-  shape: RoundedRectangleBorder(
+            ),
+            ));
+          bottomSheetController.closed.then((value) {
+            setState(() {
+              isOpen = !isOpen;
+              isTap5=false;
+            });
+          }
+          );
+          } else {
+            Navigator.of(context).pop();
+            setState(() {
+              isOpen =!isOpen;
+            });
+          }
+        }, 
+        child: Text("মডেল টেস্ট"),
+        style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          primary:Color(0xf045de9).withOpacity(0.90)
+          primary:isTap5?Colors.purple.withOpacity(0.9):Color(0xf045de9).withOpacity(0.90)
                     ),
                 ),
               ),
@@ -638,23 +593,22 @@ List<String>exam=[
              onPressed: (){
               setState(() {
                  isOpen = !isOpen;
-                 isTap=false;
-                 isTap2=true;
+                 isTap6=true;
               });
              if (isOpen) {
                bottomSheetController=  showBottomSheet(
         
-          backgroundColor: Color(0xf045de9).withOpacity(0.90),
-          context: context,
-          builder: (context) => Container(
-            margin: EdgeInsets.symmetric(horizontal: 10),
+            backgroundColor: Color(0xf045de9).withOpacity(0.90),
+            context: context,
+            builder: (context) => Container(
+              margin: EdgeInsets.symmetric(horizontal: 10),
+              color: Colors.white,
+            height: MediaQuery.of(context).size.height/1.85,
+            child: new Container(
+              margin: EdgeInsets.symmetric(horizontal: 10),
+            decoration: new BoxDecoration(
             color: Colors.white,
-          height: MediaQuery.of(context).size.height/1.85,
-          child: new Container(
-            margin: EdgeInsets.symmetric(horizontal: 10),
-          decoration: new BoxDecoration(
-          color: Colors.white,
-           ),
+            ),
             child: 
               Column(
            children: [
@@ -662,19 +616,32 @@ List<String>exam=[
             
           ),
            CustomExpanded(title: quize)
-   ],
-   ),      
-    ),
-    ));
-  
-  }
-  }, 
-  child: Text("কুইজ"),
-  style: ElevatedButton.styleFrom(
-  shape: RoundedRectangleBorder(
+          ],
+          ),      
+            ),
+            )
+            );
+          
+         bottomSheetController.closed.then((value) {
+            setState(() {
+              isOpen = !isOpen;
+              isTap6=false;
+            });
+          }
+          );
+          } else {
+            Navigator.of(context).pop();
+            setState(() {
+              isOpen =!isOpen;
+            });
+          }
+          }, 
+          child: Text("কুইজ"),
+          style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          primary:Color(0xf045de9).withOpacity(0.90) 
+          primary:isTap6?Colors.purple.withOpacity(0.9):Color(0xf045de9).withOpacity(0.90)
                     ),
                 ),
               ),
@@ -771,6 +738,33 @@ List<String>exam=[
         ),
       ),
     );
+  }
+  _bottomSheet(BuildContext context){
+    showBottomSheet(
+        
+            backgroundColor: Color(0xf045de9).withOpacity(0.90),
+            context: context,
+            builder: (context) => Container(
+              margin: EdgeInsets.symmetric(horizontal: 10),
+              color: Colors.white,
+            height: MediaQuery.of(context).size.height/1.85,
+            child: new Container(
+              margin: EdgeInsets.symmetric(horizontal: 10),
+            decoration: new BoxDecoration(
+            color: Colors.white,
+            ),
+            child: 
+              Column(
+           children: [
+             Container(
+            
+          ),
+           CustomExpanded(title: quize)
+          ],
+          ),      
+            ),
+            )
+            );
   }
 }
 
