@@ -11,6 +11,14 @@ class BookScreen extends StatefulWidget {
 }
 
 class _BookScreenState extends State<BookScreen> {
+  var bottomSheetController;
+  bool isOpen = false;
+   bool isTap=false;
+   bool isTap2=false;
+   bool isTap3=false;
+   bool isTap4=false;
+   bool isTap5=false;
+   bool isTap6=false;
   List<String>sImage=[
   "assets/silder.jpg",
   "assets/slider2.jpg"
@@ -29,10 +37,7 @@ class _BookScreenState extends State<BookScreen> {
     
   ];
 
-     bool isOpen = false;
-   bool isTap=false;
-   bool isTap2=false;
-   var bottomSheetController;
+   
      List<String>model=[
   "মডেল টেস্ট ১",
   "মডেল টেস্ট 2",
@@ -487,8 +492,8 @@ List<String> price=[
             onPressed: (){
               setState(() {
                  isOpen = !isOpen;
-                 isTap=false;
-                 isTap2=true;
+                isTap4=true;
+                 
               });
              if (isOpen) {
                bottomSheetController=  showBottomSheet(
@@ -514,16 +519,30 @@ List<String> price=[
    ],
    ),      
     ),
-    ));
+    )
+    );
+    
+        bottomSheetController.closed.then((value) {
+                  setState(() {
+                    isOpen = !isOpen;
+                    isTap4=false;
+                  });
+                }
+                );
+                } else {
+                  Navigator.of(context).pop();
+                  setState(() {
+                    isOpen =!isOpen;
+                  });
+                }
   
-  }
-  }, 
+              }, 
   child: Text("পরীক্ষা"),
   style: ElevatedButton.styleFrom(
   shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          primary:Color(0xf045de9).withOpacity(0.90)
+          primary:isTap4?Colors.purple.withOpacity(0.9):Color(0xf045de9).withOpacity(0.90)
                     ),
                 ),
               ),
@@ -534,8 +553,7 @@ List<String> price=[
              onPressed: (){
               setState(() {
                  isOpen = !isOpen;
-                 isTap=false;
-                 isTap2=true;
+                 isTap5=true;
               });
              if (isOpen) {
                bottomSheetController=  showBottomSheet(
@@ -556,14 +574,27 @@ List<String> price=[
     ),
     ));
   
-  }
-  }, 
+ bottomSheetController.closed.then((value) {
+                  setState(() {
+                    isOpen = !isOpen;
+                    isTap5=false;
+                  });
+                }
+                );
+                } else {
+                  Navigator.of(context).pop();
+                  setState(() {
+                    isOpen =!isOpen;
+                  });
+                }
+  
+              }, 
   child: Text("মডেল টেস্ট"),
   style: ElevatedButton.styleFrom(
   shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          primary:Color(0xf045de9).withOpacity(0.90)
+          primary:isTap5?Colors.purple.withOpacity(0.9):Color(0xf045de9).withOpacity(0.90)
                     ),
                 ),
               ),
@@ -574,8 +605,7 @@ List<String> price=[
              onPressed: (){
               setState(() {
                  isOpen = !isOpen;
-                 isTap=false;
-                 isTap2=true;
+                 isTap6=true;
               });
              if (isOpen) {
                bottomSheetController=  showBottomSheet(
@@ -603,14 +633,27 @@ List<String> price=[
     ),
     ));
   
-  }
-  }, 
+  bottomSheetController.closed.then((value) {
+                  setState(() {
+                    isOpen = !isOpen;
+                    isTap6=false;
+                  });
+                }
+                );
+                } else {
+                  Navigator.of(context).pop();
+                  setState(() {
+                    isOpen =!isOpen;
+                  });
+                }
+  
+              }, 
   child: Text("কুইজ"),
   style: ElevatedButton.styleFrom(
   shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          primary:Color(0xf045de9).withOpacity(0.90) 
+          primary:isTap6?Colors.purple.withOpacity(0.9):Color(0xf045de9).withOpacity(0.90)
                     ),
                 ),
               ),
@@ -692,7 +735,7 @@ List<String> price=[
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             AspectRatio(
-                              aspectRatio: 1.3,
+                              aspectRatio: 1.2,
                               child: image[index]
                               ),
                             Column(

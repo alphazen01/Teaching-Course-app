@@ -6,6 +6,7 @@ import 'package:demo/model_test.dart';
 import 'package:demo/screens/video.dart';
 import 'package:demo/sign_up.dart';
 import 'package:demo/widget/custom_expanded.dart';
+import 'package:demo/widget/quize_expanded.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen2 extends StatefulWidget {
@@ -34,7 +35,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
     Image.asset("assets/9.png",fit: BoxFit.cover,),
     
   ];
-
+   var bottomSheetController;
    bool isOpen = false;
    bool isTap=false;
    bool isTap2=false;
@@ -42,7 +43,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
    bool isTap4=false;
    bool isTap5=false;
    bool isTap6=false;
-   var bottomSheetController;
+   
      List<String>model=[
   "মডেল টেস্ট ১",
   "মডেল টেস্ট 2",
@@ -99,6 +100,7 @@ List<String>exam=[
 
   @override
   Widget build(BuildContext context) {
+  
     return Scaffold(
       backgroundColor: Color(0xf045de9).withOpacity(0.90),
        drawer: Drawer(
@@ -595,7 +597,7 @@ List<String>exam=[
              Container(
             
           ),
-           CustomExpanded(title: quize)
+           QuizeExpanded(title: quize)
           ],
           ),      
             ),

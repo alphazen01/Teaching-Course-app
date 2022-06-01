@@ -8,14 +8,16 @@ import 'package:demo/language.dart';
 import 'package:demo/log_in.dart';
 import 'package:demo/rooms.dart';
 import 'package:demo/screens/bangla_1st_exam.dart';
-import 'package:demo/screens/kuiz.dart';
 import 'package:demo/screens/exam.dart';
 import 'package:demo/screens/profile.dart';
+import 'package:demo/screens/quize_1.dart';
+import 'package:demo/screens/quize_4.dart';
 import 'package:demo/screens/video.dart';
 import 'package:demo/sign_up.dart';
 import 'package:demo/play_circle.dart';
 import 'package:demo/ring.dart';
 import 'package:demo/search.dart';
+import 'package:demo/widget/listview_test.dart';
 import 'package:flutter/material.dart';
 
 class NavigationScreen extends StatefulWidget {
@@ -32,7 +34,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
     SignUpScreen(),
     LogInScreen(),
     BookScreen(),
-    LanguageScreen(),
+    QuizePage4(),
     ProfileScreen()
     
     

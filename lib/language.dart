@@ -23,6 +23,12 @@ class _LanguageScreenState extends State<LanguageScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
+        body: Column(
+          children: [
+
+          ],
+          )
       //   extendBodyBehindAppBar: true,
       //   appBar: AppBar(
       //     elevation: 0,

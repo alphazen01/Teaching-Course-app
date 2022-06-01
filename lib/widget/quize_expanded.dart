@@ -1,21 +1,21 @@
-import 'package:demo/screens/bangla_1st_exam.dart';
 import 'package:demo/screens/quize_1.dart';
 import 'package:flutter/material.dart';
 
-class CustomExpanded extends StatefulWidget {
-  const CustomExpanded({
-    Key? key,
+class QuizeExpanded extends StatefulWidget {
+  
+  const QuizeExpanded({
+      Key? key,
     required this.title,
   }) : super(key: key);
 
   final List<String> title;
 
   @override
-  State<CustomExpanded> createState() => _CustomExpandedState();
+  State<QuizeExpanded> createState() => _QuizeExpandedState();
 }
 
-class _CustomExpandedState extends State<CustomExpanded> {
-  int selectedCard= -1;
+class _QuizeExpandedState extends State<QuizeExpanded> {
+   int selectedCard= -1;
    List<String>title=[];
   
   @override
@@ -55,6 +55,7 @@ class _CustomExpandedState extends State<CustomExpanded> {
                    onTap: (){ 
                      setState(() {
                        selectedCard = index;
+                       Navigator.push(context, MaterialPageRoute(builder: (_)=>QuizePage1()));
                        
                      });
                     
