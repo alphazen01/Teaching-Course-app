@@ -10,6 +10,7 @@ class Bangla1stExam extends StatefulWidget {
 }
 
 class _Bangla1stExamState extends State<Bangla1stExam> {
+  int selectedCard = -1;
    bool isOpen = false;
    bool isTap=false;
    bool isTap2=false;
