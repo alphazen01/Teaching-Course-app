@@ -1,5 +1,4 @@
 import 'package:demo/screens/bangla_1st_exam.dart';
-import 'package:demo/screens/quize_1.dart';
 import 'package:flutter/material.dart';
 
 class CustomExpanded extends StatefulWidget {
