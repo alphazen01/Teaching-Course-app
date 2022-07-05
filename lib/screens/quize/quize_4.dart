@@ -57,7 +57,6 @@ class _QuizePage4State extends State<QuizePage4> {
               Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Container(
-                  color: Colors.black,
                   child: Row(
                     children: [
                       Text(
@@ -268,14 +267,19 @@ class _QuizePage4State extends State<QuizePage4> {
                           radius: 20,
                         ),
                         title: Text(title[index]),
-                        trailing: ElevatedButton(
-                          onPressed: (){}, 
-                          child: Text("124"),
-                          style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)
-                            )
-                            
+                        trailing: SizedBox(
+                          width: 70,
+                          height: 25,
+                          child: ElevatedButton(
+                            onPressed: (){}, 
+                            child: Text("124"),
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.purpleAccent.withOpacity(0.3),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)
+                              )
+                              
+                            ),
                           ),
                         ),
                       );

@@ -1,9 +1,22 @@
-import 'package:demo/account_drawer.dart';
+
+
+
+import 'package:demo/screens/check.dart';
+import 'package:demo/screens/product/books_screen.dart';
+import 'package:demo/screens/home/home.dart';
+import 'package:demo/screens/auth/log_in.dart';
 import 'package:demo/model_test.dart';
+import 'package:demo/screens/drawer/drawer.dart';
 import 'package:demo/screens/exam.dart';
-import 'package:demo/screens/video.dart';
-import 'package:demo/sign_up.dart';
-import 'package:demo/navigation.dart';
+import 'package:demo/screens/profile/profile.dart';
+import 'package:demo/screens/quize/quize_1.dart';
+import 'package:demo/screens/quize/quize_3.dart';
+import 'package:demo/screens/product/video.dart';
+import 'package:demo/screens/auth/sign_up.dart';
+import 'package:demo/screens/product/versity_screen.dart';
+import 'package:demo/utils/constants/colors.dart';
+import 'package:demo/utils/function/navigation.dart';
+import 'package:demo/utils/function/navigation_class.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,21 +30,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: navKey,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
+        
+        appBarTheme:AppBarTheme(
+          backgroundColor: PColor.containerColor
+        ) ,
+        
         primarySwatch: Colors.blue,
       ),
-      home: NavigationScreen()
+
+      home: NavigationScreen(
+        selectedIndex: 0,
+      ),
+  
       
     );
   }

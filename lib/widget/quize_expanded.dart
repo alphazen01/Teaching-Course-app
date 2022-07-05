@@ -1,4 +1,5 @@
-import 'package:demo/screens/quize_1.dart';
+
+import 'package:demo/screens/quize/quize_1.dart';
 import 'package:flutter/material.dart';
 
 class QuizeExpanded extends StatefulWidget {

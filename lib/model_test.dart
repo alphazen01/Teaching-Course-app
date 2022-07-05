@@ -1,4 +1,4 @@
-import 'package:demo/log_in.dart';
+import 'package:demo/screens/auth/log_in.dart';
 import 'package:demo/screens/bangla_1st_exam.dart';
 import 'package:demo/widget/custom_expanded.dart';
 import 'package:flutter/material.dart';
