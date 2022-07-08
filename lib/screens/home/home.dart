@@ -123,7 +123,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     viewportFraction: 0.85,
                   ),
                   items: List<Widget>.generate(
-                      2, (index) => Image.asset(sImage[index % 2]))),
+                      2, (index) => Image.asset(sImage[index % 2]))
+                      ),
             ),
             SizedBox(
               height: 10,

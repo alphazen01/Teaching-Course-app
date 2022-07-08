@@ -42,9 +42,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
 
-      home: NavigationScreen(
-        selectedIndex: 0,
-      ),
+      // home: NavigationScreen(
+      //   selectedIndex: 0,
+      // ),
+      home:ProfileScreen()
   
       
     );
